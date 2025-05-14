@@ -1,0 +1,27 @@
+﻿@PruebaTecnica_HostAddress = https://localhost:7286
+
+POST {{PruebaTecnica_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+   "name": "Tercer Product",
+  "price": 100,
+  "stock": 15
+}
+
+###
+
+POST {{PruebaTecnica_HostAddress}}/api/order
+Content-Type: application/json
+
+{
+  "customerName": "Francis Bello",
+  "date": "2023-10-01T00:00:00",
+  "orderItems": [
+    {
+      "productId": 1,
+      "quantity": 2,
+      "unitPrice": 100.50
+    }
+  ]
+}
